@@ -9,5 +9,10 @@ html_doc = requests.post(url, data = myobj)
 
 soup = BeautifulSoup(html_doc.text, 'html.parser')
 
-print(soup.prettify())
 
+a = soup.find('select', {'name' : 'txtEvento'})
+
+print(a)
+
+
+#print(soup.prettify())
