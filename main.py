@@ -1,5 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
+import os
+
+if not os.path.exists('certificados'):
+	os.makedirs('certificados')
 
 campus = '3'
 ano = ''
