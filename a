@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="no-cache" http-equiv="pragma"/>
+  <meta content="no-cache" http-equiv="Cache-control"/>
+  <link href="http://apl.utfpr.edu.br/extensao/system/application/views/includes/css/menu.css" rel="stylesheet" type="text/css"/>
+  <link href="http://apl.utfpr.edu.br/extensao/system/application/views/includes/css/estilo_admin.css" rel="stylesheet" type="text/css"/>
+  <script src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/js/jquery.js" type="text/javascript">
+  </script>
+  <!--        JQUERY-UI-->
+  <link href="http://apl.utfpr.edu.br/extensao/system/application/views/includes/js/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+  <script src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/js/jquery-ui-1.11.4.custom/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <!--        <script type="text/javascript" src='-->
+  <!--system/application/views/includes/js/menu.js'></script>-->
+  <script src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/js/admin.js" type="text/javascript">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Pontano+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+   <title>
+    UTFPR - SGCE - Extensão - Sistema de Gestão de Certificados Eletrônicos UTFPR
+   </title>
+  </link>
+ </head>
+ <body>
+  <div id="page">
+   <div align="center" id="header_place">
+    <div id="header_logo">
+     <img alt="UTFPR logo" src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/images/utfpr/UTFPR_logo.png"/>
+    </div>
+    <h1 class="titulo ">
+     Extensão - Sistema de Gestão de Certificados Eletrônicos UTFPR
+     <div align="right" id="login_info">
+     </div>
+    </h1>
+    <div style="clear: both;">
+    </div>
+   </div>
+   <div class="content">
+    <div id="center_place">
+     <center>
+      <script src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/js/certificados.js" type="text/javascript">
+      </script>
+      <div class="center_table" id="searchRegister">
+       <div class="form_left" id="pesq_message">
+        <form action="http://apl.utfpr.edu.br/extensao/certificados/listaCertificadosPublicos" method="post">
+         <p>
+          Pesquisar por:
+         </p>
+         <input id="hdnPesquisa" name="hdnPesquisa" type="hidden" value="pesquisa"/>
+         <select id="cmbPesquisa" name="cmbPesquisa">
+          <option value="D">
+           Pessoa
+          </option>
+          <option value="C">
+           Código
+          </option>
+          <option value="V">
+           Cód. Validação
+          </option>
+         </select>
+         <input class="big_input" id="txtPesquisa" name="txtPesquisa" size="40" type="text" value="Lucas Guedes Barboza"/>
+         <button type="submit">
+          <img alt="Executar pesquisa" height="15" src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/images/search.png" width="15"/>
+          Pesquisar
+         </button>
+         <i>
+          (em branco para listar todos)
+         </i>
+        </form>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+      <br/>
+      <div class="botoes_left">
+       <button id="botao_cancelar" onclick="parent.location='http://apl.utfpr.edu.br/extensao/certificados/listaPublica'" type="button">
+        <img alt="Voltar" src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/images/seta_voltar_32.png"/>
+        <br>
+         Voltar
+        </br>
+       </button>
+      </div>
+      <div class="titulo_right">
+       <h3>
+        Listagem de Certificados - 11ª Calourada
+       </h3>
+      </div>
+      <table border="0" class="center_table" id="data_table" width="100%">
+       <tr class="linha_par">
+        <td>
+         <b>
+          Pessoa
+         </b>
+        </td>
+        <td>
+         <b>
+          Tipo de Certificado
+         </b>
+        </td>
+        <td width="50px">
+         <b>
+          Emitir
+         </b>
+        </td>
+       </tr>
+       <tr class="linha_impar" id="linha_1" onmouseout="outHighLight('#linha_1')" onmouseover="overHighLight('1')">
+        <td>
+         Lucas Guedes Barboza
+        </td>
+        <td>
+         DECLARAÇÃO
+        </td>
+        <td>
+         <center>
+          <a href="http://apl.utfpr.edu.br/extensao/certificados/validar/3207519D808888A6234951B6B649105C">
+           <img alt="Visualizar detalhes" border="0" src="http://apl.utfpr.edu.br/extensao/system/application/views/includes/images/comprovante_16.png" title="Visualizar detalhes">
+           </img>
+          </a>
+         </center>
+        </td>
+       </tr>
+      </table>
+      <div class="paginacao">
+      </div>
+     </center>
+    </div>
+   </div>
+   <div id="footer">
+    Desenvolvido: NTIC - Universidade Federal Do Pampa
+    <br>
+     Modificado em 2016 para uso na UTFPR, pela DIRGTI  Vers&amp;atildeo; 2.0
+     <br>
+     </br>
+    </br>
+   </div>
+  </div>
+ </body>
+</html>
