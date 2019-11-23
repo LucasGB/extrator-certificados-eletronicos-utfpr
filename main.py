@@ -33,7 +33,6 @@ for event in events:
 	soup = BeautifulSoup(html_doc.text, 'html.parser')
 
 	# Retrieves the text from the h3 tag, cleaning unwanted default text.
-	#titulo = soup.find('div', {'class' : 'titulo_right'}).h3.text.strip('Listagem de Certificados - ').replace('-', ' ')
 	titulo = soup.find('div', {'class' : 'titulo_right'}).h3.text.replace('Listagem de Certificados - ', '')
 	print(titulo)
 
