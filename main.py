@@ -5,10 +5,16 @@ import os
 if not os.path.exists('certificados'):
 	os.makedirs('certificados')
 
-campus = '3'
+nome = input("Digite seu nome: ")
+campi = {'Curitiba' : 1, 'Apucarana' : 2, 'Campo Mourão' : 3, 'Dois Vizinhos' : 4, 'Francisco Beltrão' : 5, 'Guarapuava' : 6, 'Lodrina' : 7, 'Medianeira' : 8, 'Pato Branco' : 9, 'Ponta Grossa' : 10, 'Santa Helena' : 11, 'Toledo' : 12, 'Cornélio Procópio' : 13}
+campus = input('Digite seu campus: ')
+while(campus not in campi):
+	print('Entrada inválida.')
+	campus = input('Digite seu campus: ')
+
+campus = campi.get(campus)
 ano = ''
 evento = ''
-nome = 'Lucas Guedes Barboza'
 hdnPesquisa = 'pesquisa'
 cmbPesquisa = 'D'
 events = []
